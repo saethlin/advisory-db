@@ -1,0 +1,47 @@
+{
+  "id": "RUSTSEC-2021-0025",
+  "modified": "2021-02-15T16:43:30+00:00",
+  "published": "2021-02-15T12:00:00+00:00",
+  "aliases": [],
+  "related": [],
+  "package": {
+    "ecosystem": "crates.io",
+    "name": "jsonrpc-quic",
+    "purl": "pkg:cargo/jsonrpc-quic"
+  },
+  "summary": "crate has been renamed to `qjsonrpc`",
+  "details": "This crate has been renamed from `jsonrpc-quic` to `qjsonrpc`.\n\nThe new repository location is:\n\n<https://github.com/maidsafe/sn_api>",
+  "affects": {
+    "ranges": [
+      {
+        "type": "SEMVER"
+      }
+    ]
+  },
+  "references": [
+    {
+      "type": "PACKAGE",
+      "url": "https://crates.io/crates/jsonrpc-quic"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://rustsec.org/advisories/RUSTSEC-2021-0025.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/maidsafe/sn_api/pull/623"
+    }
+  ],
+  "ecosystem_specific": {
+    "affects": {
+      "arch": [],
+      "os": [],
+      "functions": []
+    }
+  },
+  "database_specific": {
+    "categories": [],
+    "cvss": null,
+    "informational": "unmaintained"
+  }
+}

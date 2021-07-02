@@ -1,0 +1,50 @@
+{
+  "id": "RUSTSEC-2020-0030",
+  "modified": "2021-01-04T17:02:59+00:00",
+  "published": "2020-08-18T12:00:00+00:00",
+  "aliases": [
+    "CVE-2020-35883"
+  ],
+  "related": [],
+  "package": {
+    "ecosystem": "crates.io",
+    "name": "mozwire",
+    "purl": "pkg:cargo/mozwire"
+  },
+  "summary": "Missing sanitazion in mozwire allows local file overwrite of files ending in .conf",
+  "details": "The client software downloaded a list of servers from mozilla's servers and created local files named\nafter the hostname field in the json document.\n\nNo verification of the content of the string was made, and it could therefore have included '../' leading to path traversal.\n\nThis allows an attacker in controll of mozilla's servers to overwrite/create local files named .conf.\n\nThe flaw was corrected by sanitizing the hostname field.",
+  "affects": {
+    "ranges": [
+      {
+        "type": "SEMVER",
+        "fixed": "0.4.2-0"
+      }
+    ]
+  },
+  "references": [
+    {
+      "type": "PACKAGE",
+      "url": "https://crates.io/crates/mozwire"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://rustsec.org/advisories/RUSTSEC-2020-0030.html"
+    },
+    {
+      "type": "REPORT",
+      "url": "https://github.com/NilsIrl/MozWire/issues/14"
+    }
+  ],
+  "ecosystem_specific": {
+    "affects": {
+      "arch": [],
+      "os": [],
+      "functions": []
+    }
+  },
+  "database_specific": {
+    "categories": [],
+    "cvss": null,
+    "informational": null
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "id": "RUSTSEC-2020-0078",
+  "modified": "2021-01-04T17:02:59+00:00",
+  "published": "2020-11-07T12:00:00+00:00",
+  "aliases": [
+    "CVE-2020-35920"
+  ],
+  "related": [],
+  "package": {
+    "ecosystem": "crates.io",
+    "name": "net2",
+    "purl": "pkg:cargo/net2"
+  },
+  "summary": "`net2` invalidly assumes the memory layout of std::net::SocketAddr",
+  "details": "The [`net2`](https://crates.io/crates/net2) crate has assumed `std::net::SocketAddrV4`\nand `std::net::SocketAddrV6` have the same memory layout as the system C representation\n`sockaddr`. It has simply casted the pointers to convert the socket addresess to the\nsystem representation. The standard library does not say anything about the memory\nlayout, and this will cause invalid memory access if the standard library\nchanges the implementation. No warnings or errors will be emitted once the\nchange happens.",
+  "affects": {
+    "ranges": [
+      {
+        "type": "SEMVER",
+        "fixed": "0.2.36"
+      }
+    ]
+  },
+  "references": [
+    {
+      "type": "PACKAGE",
+      "url": "https://crates.io/crates/net2"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://rustsec.org/advisories/RUSTSEC-2020-0078.html"
+    },
+    {
+      "type": "REPORT",
+      "url": "https://github.com/deprecrated/net2-rs/issues/105"
+    }
+  ],
+  "ecosystem_specific": {
+    "affects": {
+      "arch": [],
+      "os": [],
+      "functions": []
+    }
+  },
+  "database_specific": {
+    "categories": [],
+    "cvss": null,
+    "informational": "unsound"
+  }
+}
