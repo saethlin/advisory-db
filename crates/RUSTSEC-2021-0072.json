@@ -1,6 +1,6 @@
 {
   "id": "RUSTSEC-2021-0072",
-  "modified": "2021-07-07T23:09:42+00:00",
+  "modified": "2021-07-07T23:26:08+00:00",
   "published": "2021-07-07T12:00:00+00:00",
   "aliases": [],
   "related": [],
@@ -32,10 +32,6 @@
         "type": "SEMVER",
         "introduced": "1.8.0",
         "fixed": "1.8.1"
-      },
-      {
-        "type": "SEMVER",
-        "introduced": "2.0.0-0"
       }
     ]
   },
