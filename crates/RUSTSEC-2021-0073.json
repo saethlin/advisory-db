@@ -1,6 +1,6 @@
 {
   "id": "RUSTSEC-2021-0073",
-  "modified": "2021-07-08T17:27:50+00:00",
+  "modified": "2021-07-08T18:34:15+00:00",
   "published": "2021-07-08T12:00:00+00:00",
   "aliases": [],
   "related": [],
@@ -37,9 +37,7 @@
     "affects": {
       "arch": [],
       "os": [],
-      "functions": [
-        "prost_types::Timestamp::Into<SystemTime>"
-      ]
+      "functions": []
     }
   },
   "database_specific": {
